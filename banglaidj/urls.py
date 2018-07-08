@@ -21,6 +21,7 @@ from django.conf.urls import url, include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog_post.urls'), name='home'),
+    url(r'^cost/',include('cost_management.urls'),name='home')
 
 ]
 
