@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Post
+from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
@@ -14,6 +15,8 @@ def single_post(request, post_id):
     post = Post.objects.get(pk=post_id)
     #print(post)
     return render(request, 'single_post.html', {'post':post})
+def dummy(request):
+    return HttpResponse("really dummy")
 
 
 
